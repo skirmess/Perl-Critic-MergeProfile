@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp         ();
 use Config::Tiny ();
@@ -117,7 +117,7 @@ Perl::Critic::MergeProfile - merge multiple Perl::Critic profiles into one
 
 =head1 VERSION
 
-Version 0.001
+Version 0.002
 
 =head1 SYNOPSIS
 
