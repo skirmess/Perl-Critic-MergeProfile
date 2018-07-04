@@ -27,14 +27,14 @@ USAGE
 
  new
 
-    Returns a new Perl::Critic::MergeProfile|Perl::Critic::MergeProfile
-    instance. Arguments to new are ignored.
+    Returns a new Perl::Critic::MergeProfile instance. Arguments to new are
+    ignored.
 
  read( FILENAME, [ ENCODING ] )
 
     Calls read from Config::Tiny with the same arguments it was called.
-    Please see the documentation for Config::Tinys read for an explanation
-    of the parameters.
+    Please see the documentation for read of Config::Tiny for an
+    explanation of the parameters.
 
     If no valid Config::Tiny object is returned an exception is thrown.
 
@@ -61,20 +61,14 @@ USAGE
     nor read_string were successfully called at least once.
 
     Otherwise write from Config::Tiny is called on the profile with the
-    same arguments write was called. Please see the documentation for
-    Config::Tinys write for an explanation of the parameters.
+    same arguments write was called. Please see the documentation for write
+    of Config::Tiny for an explanation of the parameters.
 
     Returns something true if on success and throws an exception otherwise.
 
  write_string
 
-    An exception is thrown if no valid policy exists, because neither read
-    nor read_string were successfully called at least once.
-
-    Otherwise write_string from Config::Tiny is called on the profile with
-    the same arguments write_string was called. Please see the
-    documentation for Config::Tinys write_string for an explanation of the
-    parameters.
+    Behaves the same as write but calls write_string from Config::Tiny.
 
     Returns the policy as string on success and throws an exception
     otherwise.

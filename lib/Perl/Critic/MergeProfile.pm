@@ -139,14 +139,14 @@ specific changes to the profile.
 
 =head2 new
 
-Returns a new C<Perl::Critic::MergeProfile|Perl::Critic::MergeProfile>
+Returns a new C<Perl::Critic::MergeProfile>
 instance. Arguments to C<new> are ignored.
 
 =head2 read( FILENAME, [ ENCODING ] )
 
 Calls C<read> from L<Config::Tiny|Config::Tiny> with the same arguments it
-was called. Please see the documentation for L<Config::Tiny|Config::Tiny>s
-C<read> for an explanation of the parameters.
+was called. Please see the documentation for C<read> of
+L<Config::Tiny|Config::Tiny> for an explanation of the parameters.
 
 If no valid L<Config::Tiny|Config::Tiny> object is returned an exception is
 thrown.
@@ -176,19 +176,14 @@ C<read_string> were successfully called at least once.
 
 Otherwise C<write> from L<Config::Tiny|Config::Tiny> is called on the profile
 with the same arguments C<write> was called. Please see the documentation for
-L<Config::Tiny|Config::Tiny>s C<write> for an explanation of the parameters.
+C<write> of L<Config::Tiny|Config::Tiny> for an explanation of the parameters.
 
 Returns something I<true> if on success and throws an exception otherwise.
 
 =head2 write_string
 
-An exception is thrown if no valid policy exists, because neither C<read> nor
-C<read_string> were successfully called at least once.
-
-Otherwise C<write_string> from L<Config::Tiny|Config::Tiny> is called on the
-profile with the same arguments C<write_string> was called. Please see the
-documentation for L<Config::Tiny|Config::Tiny>s C<write_string> for an
-explanation of the parameters.
+Behaves the same as C<write> but calls C<write_string> from
+L<Config::Tiny|Config::Tiny>.
 
 Returns the policy as string on success and throws an exception otherwise.
 

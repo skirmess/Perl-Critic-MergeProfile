@@ -26,14 +26,14 @@ specific changes to the profile.
 
 ## new
 
-Returns a new `Perl::Critic::MergeProfile|Perl::Critic::MergeProfile`
+Returns a new `Perl::Critic::MergeProfile`
 instance. Arguments to `new` are ignored.
 
 ## read( FILENAME, \[ ENCODING \] )
 
 Calls `read` from [Config::Tiny](https://metacpan.org/pod/Config::Tiny) with the same arguments it
-was called. Please see the documentation for [Config::Tiny](https://metacpan.org/pod/Config::Tiny)s
-`read` for an explanation of the parameters.
+was called. Please see the documentation for `read` of
+[Config::Tiny](https://metacpan.org/pod/Config::Tiny) for an explanation of the parameters.
 
 If no valid [Config::Tiny](https://metacpan.org/pod/Config::Tiny) object is returned an exception is
 thrown.
@@ -63,19 +63,14 @@ An exception is thrown if no valid policy exists, because neither `read` nor
 
 Otherwise `write` from [Config::Tiny](https://metacpan.org/pod/Config::Tiny) is called on the profile
 with the same arguments `write` was called. Please see the documentation for
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny)s `write` for an explanation of the parameters.
+`write` of [Config::Tiny](https://metacpan.org/pod/Config::Tiny) for an explanation of the parameters.
 
 Returns something _true_ if on success and throws an exception otherwise.
 
 ## write\_string
 
-An exception is thrown if no valid policy exists, because neither `read` nor
-`read_string` were successfully called at least once.
-
-Otherwise `write_string` from [Config::Tiny](https://metacpan.org/pod/Config::Tiny) is called on the
-profile with the same arguments `write_string` was called. Please see the
-documentation for [Config::Tiny](https://metacpan.org/pod/Config::Tiny)s `write_string` for an
-explanation of the parameters.
+Behaves the same as `write` but calls `write_string` from
+[Config::Tiny](https://metacpan.org/pod/Config::Tiny).
 
 Returns the policy as string on success and throws an exception otherwise.
 
