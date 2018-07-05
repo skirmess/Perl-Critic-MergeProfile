@@ -158,8 +158,9 @@ profile. No checks are performed on this first profile object.
 Otherwise, the returned object is checked and if the same policy is enabled
 and disabled in this new profile an exception is thrown.
 
-After that, existing entries for this policy are removed from the base policy
-and a new entry either a disabled or enabled policy is added.
+After that, existing entries for all policies from the new profile are
+removed from the merged profile. Then the polices from the new profile are
+added to the merged profile.
 
 Entries in the global section of this profile overwrite the existing entries
 with the same name in the global section.
@@ -198,7 +199,7 @@ L<Perl::Critic|Perl::Critic> with a merged profile.
     use strict;
     use warnings;
 
-    use Test::More 0.88;
+    use Test::More;
     use Perl::Critic::MergeProfile;
 
     eval {
