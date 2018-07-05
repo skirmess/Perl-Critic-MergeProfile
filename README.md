@@ -4,7 +4,7 @@ Perl::Critic::MergeProfile - merge multiple Perl::Critic profiles into one
 
 # VERSION
 
-Version 0.002
+Version 0.003
 
 # SYNOPSIS
 
