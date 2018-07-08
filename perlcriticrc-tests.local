@@ -1,8 +1,0 @@
-[-Bangs::ProhibitNumberedNames]
-[-RegularExpressions::RequireDotMatchAnything]
-[-RegularExpressions::RequireExtendedFormatting]
-[-RegularExpressions::RequireLineBoundaryMatching]
-[Subroutines::RequireFinalReturn]
-terminal_funcs = BAIL_OUT
-[-ValuesAndExpressions::RequireInterpolationOfMetachars]
-[-Variables::RequireInitializationForLocalVars]
