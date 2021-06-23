@@ -4,5 +4,5 @@
 .build
 .perlcritic_package.yml
 Perl-Critic-MergeProfile-*
-dzil-inc
+dzil-bundle
 tmp
