@@ -20,7 +20,6 @@ on test => sub {
 
 on develop => sub {
     requires 'CPANPLUS';
-    requires 'FindBin';
     requires 'JSON::MaybeXS';
     requires 'Module::Info';
     requires 'Path::Tiny';
