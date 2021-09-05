@@ -17,7 +17,7 @@ Version 0.003
 
 # DESCRIPTION
 
-Merges multiple [Perl::Critic](https://metacpan.org/pod/Perl::Critic) profiles into a single one.
+Merges multiple [Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic) profiles into a single one.
 
 This allows to keep a common base profile for all projects but add project
 specific changes to the profile.
@@ -31,15 +31,15 @@ instance. Arguments to `new` are ignored.
 
 ## read( FILENAME, \[ ENCODING \] )
 
-Calls `read` from [Config::Tiny](https://metacpan.org/pod/Config::Tiny) with the same arguments it
+Calls `read` from [Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) with the same arguments it
 was called. Please see the documentation for `read` of
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny) for an explanation of the parameters.
+[Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) for an explanation of the parameters.
 
-If no valid [Config::Tiny](https://metacpan.org/pod/Config::Tiny) object is returned an exception is
+If no valid [Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) object is returned an exception is
 thrown.
 
 If this is the first call to `read` or `read_string`, the returned
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny) object is used as the base of the new merged
+[Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) object is used as the base of the new merged
 profile. No checks are performed on this first profile object.
 
 Otherwise, the returned object is checked and if the same policy is enabled
@@ -55,32 +55,32 @@ with the same name in the global section.
 ## read\_string( STRING )
 
 Behaves the same as `read` but calls `read_string` from
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny).
+[Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny).
 
 ## write( FILENAME, \[ ENCODING \] )
 
 An exception is thrown if no valid policy exists, because neither `read` nor
 `read_string` were successfully called at least once.
 
-Otherwise `write` from [Config::Tiny](https://metacpan.org/pod/Config::Tiny) is called on the profile
+Otherwise `write` from [Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) is called on the profile
 with the same arguments `write` was called. Please see the documentation for
-`write` of [Config::Tiny](https://metacpan.org/pod/Config::Tiny) for an explanation of the parameters.
+`write` of [Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny) for an explanation of the parameters.
 
 Returns something _true_ if on success and throws an exception otherwise.
 
 ## write\_string
 
 Behaves the same as `write` but calls `write_string` from
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny).
+[Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny).
 
 Returns the policy as string on success and throws an exception otherwise.
 
 # EXAMPLES
 
-## Example 1 [Test::Perl::Critic](https://metacpan.org/pod/Test::Perl::Critic)
+## Example 1 [Test::Perl::Critic](https://metacpan.org/pod/Test%3A%3APerl%3A%3ACritic)
 
 The following test script can be used to test your code with
-[Perl::Critic](https://metacpan.org/pod/Perl::Critic) with a merged profile.
+[Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic) with a merged profile.
 
     use 5.006;
     use strict;
@@ -108,8 +108,8 @@ The following test script can be used to test your code with
 
 # SEE ALSO
 
-[Config::Tiny](https://metacpan.org/pod/Config::Tiny), [Perl::Critic](https://metacpan.org/pod/Perl::Critic),
-[Test::Perl::Critic](https://metacpan.org/pod/Test::Perl::Critic)
+[Config::Tiny](https://metacpan.org/pod/Config%3A%3ATiny), [Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic),
+[Test::Perl::Critic](https://metacpan.org/pod/Test%3A%3APerl%3A%3ACritic)
 
 # SUPPORT
 
