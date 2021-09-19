@@ -7,6 +7,7 @@ use warnings;
 use Test::Fatal;
 use Test::More 0.88;
 
+use Carp qw(croak);
 use Cwd            ();
 use File::Basename ();
 use File::Spec     ();
@@ -91,7 +92,7 @@ sub _cat {
         }
     }
 
-    BAIL_OUT("Cannot read file '$file': $!");
+    croak "Cannot read file '$file': $!";
 }
 
 # vim: ts=4 sts=4 sw=4 et: syntax=perl
